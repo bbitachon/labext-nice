@@ -1,0 +1,30 @@
+[project]
+name = "labext-nice"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Bertold Ian Bitachon", email = "bertold.ian@gmail.com" }
+]
+requires-python = ">=3.11.5"
+dependencies = [
+    "click>=8.4.0",
+    "nicegui>=3.12.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.15,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.3.0",
+]
+
+[project.scripts]
+labext = "labext_nice.gui_elements.labext:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+main_file = ""
