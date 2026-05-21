@@ -1,6 +1,5 @@
 # base_card.py
 from abc import ABC, abstractmethod
-from nicegui import ui
 
 
 class BaseCard(ABC):

@@ -44,12 +44,8 @@ class MainWindowView:
 
         @ui.page("/")
         def index():
-            with ui.column().classes("w-full"):
-                MeasurementControlCard()  # self._build_toolbar()
-            # with ui.row().classes("w-full gap-4 mt-2"):
-            #     self._build_queue_panel()
-            #     self._build_plot_panel()
-            # self._build_log_panel()
+            with ui.grid(columns=1):
+                MeasurementControlCard()
 
     # ── Toolbar ───────────────────────────────────────────────────────────────
 
